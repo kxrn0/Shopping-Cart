@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Burger from "../Burger/Burger";
-import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import Underlink from "../Underlink/Underlink";
 import "./navbar.css";

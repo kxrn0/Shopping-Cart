@@ -13,7 +13,8 @@ import cartEmpty from "./assets/cart-empty.svg";
 import cartHeart from "./assets/cart-heart.svg";
 
 import "./style.css";
-import make_request from "./utilities/request";
+import make_request from "./utilities/request";        const sources = [];
+
 
 import { items } from "./data";
 
@@ -24,7 +25,7 @@ function App() {
             tag: "Link",
             type: "text",
             options: {
-                path: "/",
+                path: "/Shopping-cart",
                 name: "Home",
                 classes: ["fs-normal", "fm-monse-medium"],
             },
@@ -138,30 +139,14 @@ function App() {
 
     async function set_purchased() {
         const links = [];
-        const sources = [];
 
         setLoading(true);
         setError(false);
 
         for (let item of inBag) {
-            // const product = { id: item.id, links: [] };
-
-            // for (let i = 0; i < item.amount; i++)
-            //     product.links.push(make_request(item.link));
-            // links.push(product);
-
             for (let i = 0; i < item.amount; i++)
                 links.push(make_request(item.link));
         }
-        // links.forEach(set => {
-        //     Promise.all(set.links).then(responses => {
-        //         if ("url" in responses[0])
-        //             responses = responses.map(res => res.url);
-        //         else
-        //             responses = responses.map(res => res.images[0].url);
-
-        //     });
-        // });
 
         Promise.all(links)
             .then((responses) => {
@@ -184,7 +169,7 @@ function App() {
             <BrowserRouter>
                 <Navbar links={links} />
                 <Routes>
-                    <Route path="/" element={<Home />}></Route>
+                    <Route path="/Shopping-cart" element={<Home />}></Route>
                     <Route
                         path="/market"
                         element={
