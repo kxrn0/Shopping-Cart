@@ -18,6 +18,10 @@
     gap: 0.5rem;
 }
 
+.home p {
+    line-height: 2rem;
+}
+
 @media screen and (max-width: 600px) {
     .home {
         display: flex;

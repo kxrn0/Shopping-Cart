@@ -9,7 +9,7 @@ export default function Home() {
         <div className="home">
             <div className="logo-wrapper">
                 <Logo />
-                <p className="fm-monse-medium fs-normal lnh-medium">
+                <p className="fm-monse-medium fs-normal">
                     The number one Waifu Market place on the internet. Following
                     the Abelson crisis, the demand for waifus increased
                     dramatically, something that the supply chains at the time
