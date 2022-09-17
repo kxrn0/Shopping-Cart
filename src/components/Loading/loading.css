@@ -1,0 +1,26 @@
+.loading {
+    background: rgb(250, 250, 195);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.loading .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.loading .container p {
+    color: rgb(228, 97, 118)
+}
+
+.loading .loading-icon {
+    background: #000;
+    border-radius: 50%;
+}

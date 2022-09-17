@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: nanum;
+    src: url("./assets/NanumBrushScript-Regular.ttf");
+}
+
+@font-face {
+    font-family: monse-medium;
+    src: url("./assets/Montserrat-Medium.ttf");
+}
+
+@font-face {
+    font-family: monse-light;
+    src: url("./assets/Montserrat-Light.ttf");
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.fm-nanum {
+    font-family: nanum;
+}
+
+.fm-monse-medium {
+    font-family: monse-medium;
+}
+
+.fm-monse-light {
+    font-family: monse-light;
+}
+
+.fs-normal {
+    font-size: 1rem;
+}
+
+.fs-medium {
+    font-size: 1.5rem;
+}
+
+.fs-large {
+    font-size: 3rem;
+}
+
+.fs-extra-large {
+    font-size: 10rem;
+}
+
+.hovertone {
+    background: rgb(63, 0, 0);
+    color: azure;
+    border: 1px solid rgb(63, 0, 0);
+    transition: background-color 0.33s, color 0.33s, transform .33s;
+}
+
+.hovertone:active {
+    transform: scale(.95);
+}
+
+.emoji {
+    color: pink;
+}
+
+.shown {
+    top: 0;
+}
+
+.hidden {
+    top: -100%;
+}
+
+@media screen and (hover: hover) {
+    .hovertone:hover {
+        background: azure;
+        color: rgb(63, 0, 0);
+    }
+}
+
+.footer {
+    background: rgb(201, 249, 197);
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .fs-extra-large {
+        font-size: 5rem;
+    }
+}
