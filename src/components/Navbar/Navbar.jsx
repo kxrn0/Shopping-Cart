@@ -3,7 +3,6 @@ import Burger from "../Burger/Burger";
 import Logo from "../Logo/Logo";
 import Underlink from "../Underlink/Underlink";
 import "./navbar.css";
-import "../../underline.css";
 
 export default function Navbar({ links }) {
     const [checked, setChecked] = useState(false);
